@@ -1,4 +1,4 @@
-//import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,8 +15,8 @@ public class DebitCardOrder {
 
     @BeforeAll
     static void setUpall() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Education\\JavaAvto\\AutoJavaL2.1\\AutoJavaL2.1\\driver\\win\\chromedriver.exe");
-//        WebDriverManager.chromedriver().setup();
+//        System.setProperty("webdriver.chrome.driver", "C:\\Education\\JavaAvto\\AutoJavaL2.1\\AutoJavaL2.1\\driver\\win\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
@@ -37,7 +37,7 @@ public class DebitCardOrder {
 
     @Test
     void testForTest() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Education\\JavaAvto\\AutoJavaL2.1\\AutoJavaL2.1\\driver\\win\\chromedriver.exe");
+
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("span[data-test-id=name] input")).sendKeys("Иван - Иванов");
         driver.findElement(By.cssSelector("span[data-test-id=phone] input")).sendKeys("+79999999999");
