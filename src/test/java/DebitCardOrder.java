@@ -16,7 +16,7 @@ public class DebitCardOrder {
     @BeforeAll
     static void setUpall() {
 //        System.setProperty("webdriver.chrome.driver", "C:\\Education\\JavaAvto\\AutoJavaL2.1\\AutoJavaL2.1\\driver\\win\\chromedriver.exe");
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().driverVersion("108").setup();
     }
 
     @BeforeEach
